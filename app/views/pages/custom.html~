@@ -1,0 +1,4 @@
+Custom:
+Parametro <%= params[:nombre] +' '+params[:apellido] %> 
+
+Hola: <%= @nombre %>
