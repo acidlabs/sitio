@@ -1,0 +1,14 @@
+%h1 
+  HOLA SOY CUSTOM
+<br/>
+<p>pagina custom html</p>
+<br/>
+%p
+  Hola
+  = @name + '!'
+  - if @name == 'Invitado'
+    Puedes decirme tu nombre agregando <b>?=nombre=manuel</b> a la URL.
+  - else 
+    Gracias por decirme tu nombre!
+%a{href: 'http://haml.info/'}
+  La documentacion de haml esta aqui!!!
