@@ -1,0 +1,12 @@
+%h1
+  Bienvenidos a Bice Vida
+%p
+  Hola
+  = @name + '!'
+  - if @name == 'Invitado'
+    Puedes decirme tu nombre agregando <b>?=nombre=Manuel</b> a la URL.
+  - else
+    Gracias por decirme tu nombre!
+
+%a{href: 'http://haml.info/', title: 'Documentación oficial de HAML'}
+  La documentación de HAML está aquí!
