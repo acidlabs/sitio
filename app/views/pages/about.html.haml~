@@ -1,5 +1,5 @@
 %h1 
-  HOLA SOY CUSTOM
+  HOLA SOY about
 
 %nav
   %ul
@@ -7,15 +7,11 @@
       - if params[:controller] == 'pages' && params[:action] == 'index'
         %b Home
       - else
-        %a{ href: '/'} Home
-    %li
-      - if params[:controller] == 'pages' && params[:action] == 'about'
-        %b About 
-      - else
-        %a{ href: '/about'} About
+        %a Home
+    
 %p
   Hola
-  = @name + '!'
+  = @name || '!'
   - if @name == 'Invitado'
     Puedes decirme tu nombre agregando <b>?=nombre=manuel</b> a la URL.
   - else 
