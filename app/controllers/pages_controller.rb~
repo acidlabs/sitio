@@ -1,0 +1,8 @@
+class PagesController < ApplicationController
+ 
+ def index
+   render 'pages/custom.html',
+   status: :ok,
+   layout: 'bice_vida'
+  end
+end

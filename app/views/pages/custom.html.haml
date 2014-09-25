@@ -1,0 +1,17 @@
+%h1
+  Bienvenidos a BV
+%p
+  Hola
+  = @name + '!'
+  - if @name == 'Invitado'
+      Puedes decirme tu nombre agragando <b>..
+  - else
+    Gracias por decirme tu nombre!
+%a{href: 'HTTP://',title: '
+Documentatión oficial'}
+  La documentación está aquí!
+  
+
+
+
+
