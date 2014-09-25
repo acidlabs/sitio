@@ -1,5 +1,13 @@
 %h1
   Bienvenidos a Bice Vida
+
+%nav
+  %ul
+    %li
+      -if params[:controller] == 'pages' && params[:action] = 'index'
+        %span <b>Home</b>
+      - else
+        %a{ href: '/', title: 'Página de inicio' } Home
 %p
   Hola
   = @name + '!'
