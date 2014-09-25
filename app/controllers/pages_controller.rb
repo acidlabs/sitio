@@ -11,8 +11,11 @@ class PagesController < ApplicationController
   	
   	# retorna index.html
   	#render status: :forbidden
-  	render 'pages/custom.html', 
+  	render 'pages/custom', 
   	  status: :ok,
   	  layout: 'bice_vida'
+  end
+
+  def about 
   end
 end
