@@ -1,0 +1,12 @@
+%nav
+  %url
+    %li
+      - if (params[:controller] == 'pages' && params[:action] == 'bice')
+      %span<b>home</b>
+      - else
+      %a{href:'/', title:'página de inicio'} Home
+    %li 
+      - if (params[:controller] == 'pages' && params[:action] == 'about')
+      %span<b>about</b>
+      - else
+        %a{href:'/about', title:'acerca de ...'} About
