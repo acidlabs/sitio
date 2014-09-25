@@ -7,4 +7,7 @@ class PagesController < ApplicationController
            status: :ok,
            layout: 'bice_vida'
   end
+
+  def about
+  end
 end
