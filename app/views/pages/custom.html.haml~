@@ -1,0 +1,8 @@
+%h1
+  Bienvenidos a Bicevida
+%p
+  Hola
+  =@name + '!'
+%a{href: 'http::haml.info/'}
+  aqui MC Hamel
+

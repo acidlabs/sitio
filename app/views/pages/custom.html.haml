@@ -1,0 +1,24 @@
+%h1 
+  HOLA SOY CUSTOM
+%nav
+  %ul
+    %li
+      - if params[:controller] == 'pages' && params[:action] == 'index'
+        %b Home
+      - else
+        %a Home
+    %li
+      - if params[:controller] == 'pages' && params[:action] == 'about'
+        %a{ href: 'HYPERLINK "http://www.google.cl/"http://www.google.cl', target: 'blank'} About
+      - else
+        %b About
+%p
+  Hola
+  = @name + '!'
+  - if @name == 'Invitado'
+    Puedes decirme tu nombre agregando <b>?=nombre=manuel</b> a la URL.
+  - else 
+    Gracias por decirme tu nombre!
+%a{href: 'http://haml.info/'}
+  La documentacion de haml esta aqui!!!
+
