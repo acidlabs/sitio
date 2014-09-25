@@ -1,0 +1,12 @@
+%nav
+	%ul
+		%li
+			- if (params[:controller] == 'pages' && params[:action] == 'bice')
+				%span <b> Home </b>
+			- else
+				%{ HREF: '/', title: 'Página de inicio' } Home
+		%li
+			- if (params[:controller] == 'pages' && params[:action] == 'about')
+				%span <b> About </b>
+			- else
+				%{ HREF: '/about', title: 'Acerca de...' } About

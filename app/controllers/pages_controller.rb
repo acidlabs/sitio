@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 		puts 'params >>> ' + params.inspect
 		
 		# Para mostrarlo en la vista
-		@nombre = params[:nombre]
+		@nombre = params[:nombre] || 'Invitado'
 
 		render 'pages/custom.html',
 		status: :ok,
