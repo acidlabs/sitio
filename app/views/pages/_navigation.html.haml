@@ -1,0 +1,7 @@
+%nav 
+	%ul
+		%li
+			~ if params[:controller] == 'pages' && params[:action] = 'index'
+			%span <b>Home</b>
+			~ else
+			%a{ href: '/', title: 'Pagina de inicio'} Home

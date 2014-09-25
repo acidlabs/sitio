@@ -1,0 +1,9 @@
+%h1
+	Bienvenidos a BICE VIDA
+
+= render 'navigation'
+
+%p
+	Hola 
+	= params[:nombre] + @lastname
+	%a{href: 'http://haml.info', tittle: 'Home oficial de HAML'} La documentacion de HAML esta aqui
