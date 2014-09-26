@@ -1,3 +1,11 @@
 %h1 Acerca de nosotros
 
 = render 'navigation'
+
+%h2 Clientes
+
+%ul
+  - @usuarios.each do |usuario|
+    %li
+      %p= "ID: #{ usuario.id }"
+      %p= "Nombre: #{ usuario.name }"

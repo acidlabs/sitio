@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
 
   def bice
-    @name = params[:nombre] || 'Invitado'
+    @name = clean_params[:nombre] || 'Invitado'
+
+    if clean_params[:nombre].presence
+      User.create(name: clean_params[:nombre])
+    end
 
     render 'pages/custom',
            status: :ok,
@@ -9,5 +13,17 @@ class PagesController < ApplicationController
   end
 
   def about
+    @usuarios = User.all
+  end
+
+  #private
+
+  # Returns a Hash
+  def clean_params
+    ensure_safety(params)
+  end
+
+  def ensure_safety params
+    params # tarea para la casa
   end
 end
